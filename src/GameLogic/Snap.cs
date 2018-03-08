@@ -111,12 +111,13 @@ namespace CardGames.GameLogic
 		/// Update the game. This should be called in the Game loop to enable
 		/// the game to update its internal state.
 		/// </summary>
-		public void Update()
+		public void Update ()
 		{
-			if (_gameTimer.Ticks > _flipTime)
-			//TODO: implement update to automatically slip cards!
-			_gameTimer.Reset ();
-			FlipNextCard (); 
+			if (_gameTimer.Ticks > _flipTime) {
+				//implement update to automatically slip cards!
+				_gameTimer.Reset ();
+				FlipNextCard ();
+			}
 		}
 
 		/// <summary>
